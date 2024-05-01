@@ -41,7 +41,7 @@
 | `git remote -v` | List all remote repos |
 | `git push REMOTE_ALIAS BRANCH_NAME` | Push to remote repo's particular branch, generally `BRANCH_NAME=main` |
 | `git clone ACCESS_STRING` | Clone a repo |
-| `git pull origin BRANCH_NAME` | Pull updates from remote repo |
+| `git pull REMOTE_ALIAS BRANCH_NAME` | Pull updates from remote repo |
 
 ## REBASE and CHERRYPICK
 | Command | Description |
