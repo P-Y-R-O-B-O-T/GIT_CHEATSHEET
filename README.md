@@ -40,6 +40,7 @@
 | `git remote add REMOTE_ALIAS ACCESS_STRING` | Connect to remote repo, generally `REMOTE_ALIAS=origin` |
 | `git remote -v` | List all remote repos |
 | `git push REMOTE_ALIAS BRANCH_NAME` | Push to remote repo's particular branch, generally `BRANCH_NAME=main` for single handed project |
+| `git push REMOTE_ALIAS BRANCH_NAME --force` | Force push to remote repository |
 | `git clone ACCESS_STRING` | Clone a repo |
 | `git pull REMOTE_ALIAS BRANCH_NAME` | Pull updates from remote repo |
 
@@ -223,3 +224,16 @@
 > * Commit error rectification
 > * Pop stash `git stash pop STASH_ID`
 > * Continue working
+
+> [!TIP]
+> ### SENARIO_11
+> * `max` is working on a project and he realizes he needs to update a major change (a big file in the project an image or something)
+> * This if he commits the large file the log files get larger
+> * We need to push this change to remote repository too
+>
+> ### SOLUTION
+> * Clone the repository
+> * Do a soft reset till the point where we introduced the large file for the first time `git reset --soft HEAD~N`
+> * Edit the large file
+> * Commit the changes `git add . && git commit -m "MESSAGE"`
+> * Force push the changes to remote repository `git push REMOTE_ALIAS BRANCH_NAME --force`
