@@ -56,6 +56,8 @@
 | `git revert COMMIT_ID` | Creates a new commit by reversing all changes made by the COMMIT_ID |
 | `git reset --soft HEAD~N` | Go back N commits but keep the files intact |
 | `git reset --hard HEAD~N` | Go back N commits and delete the changes made after that commit |
+| `git reset --soft COMMIT_ID` | Go to specific commit and keep the current changes |
+| `git reset --hard COMMIT_ID` | Go to specific commit and delete the changes made after that commit |
 
 ## STASH
 | Command | Description |
